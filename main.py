@@ -1,24 +1,3 @@
-
-streamlit_code = '''
-import streamlit as st
-from langchain_openai import ChatOpenAI
-from openai import APIError
-
-st.set_page_config(page_title="मराठी शिक्षक (Marathi Tutor)", page_icon="🇮🇳")
-st.title("🇮🇳 मराठी शिक्षक (Marathi Tutor)")
-
-tab1, tab2, tab3 = st.tabs([
-    "लेखन सराव (Writing Practice)",
-…            st.exception(e)
-'''
-
-with open("app.py", "w") as f:
-    f.write(streamlit_code)
-
-print("Streamlit code saved to app.py")
-!cat app.py
-Streamlit code saved to app.py
-
 import streamlit as st
 from langchain_openai import ChatOpenAI
 from openai import APIError
