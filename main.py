@@ -43,18 +43,13 @@ with tab1:
 
     if st.button("Korrigieren & Bewerten", key="writing_btn"):
         prompt = (
-            "Du bist ein professioneller Deutschlehrer für die Prüfung telc B1. "
-            "Korrigiere den Benutzer, wenn er Fehler macht. "
-            "Antworte nur auf Deutsch, benutze einfache B1-Vokabeln, erkläre Grammatikfehler auf leicht verständliche Weise und bewerte seine Antworten.
-
-"
-            f"Bitte korrigiere meinen Text und bewerte ihn nach den Kriterien der telc B1 Prüfung. "
-            "Achte auf Rechtschreibung, Grammatik, Satzbau und Wortschatz. Zeige mir meine Fehler und verbessere sie.
-
-"
-            f"Text:
-{user_text}"
-        )
+        "Du bist ein professioneller Deutschlehrer für die Prüfung telc B1. "
+        "Korrigiere den Benutzer, wenn er Fehler macht. "
+        "Antworte nur auf Deutsch, benutze einfache B1-Vokabeln, erkläre Grammatikfehler auf leicht verständliche Weise und bewerte seine Antworten."
+        f"Bitte korrigiere meinen Text und bewerte ihn nach den Kriterien der telc B1 Prüfung. "
+        "Achte auf Rechtschreibung, Grammatik, Satzbau und Wortschatz. Zeige mir meine Fehler und verbessere sie."
+        f"\nText:\n{user_text}"
+    )
         try:
             response = model.invoke(prompt)
             st.markdown("**Feedback:**")
